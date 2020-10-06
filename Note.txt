@@ -1,0 +1,11 @@
+https://medium.com/swlh/restful-api-documentation-made-easy-with-swagger-and-openapi-6df7f26dcad
+https://medium.com/thecodefountain/design-a-rest-api-with-spring-boot-and-mysql-a5572d94ccc7
+
+1. The server auto creates the tableiniyially . If the table is pre created and different slightly,
+error will thrown.
+
+2. DonorsApplication class has to be at the root of all other classes.
+
+Added OpenAPI from https://www.baeldung.com/spring-rest-openapi-documentation
+
+Added HATEOAS https://spring.io/projects/spring-hateoas#samples
