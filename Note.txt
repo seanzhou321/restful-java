@@ -10,3 +10,17 @@ Added OpenAPI from https://www.baeldung.com/spring-rest-openapi-documentation
 
 Added HATEOAS https://spring.io/guides/tutorials/rest/ from https://spring.io/projects/spring-hateoas#samples
 
+-- API docs:
+in json format: http://localhost:8080/api-docs
+download yaml file: http://localhost:8080/api-docs.yaml
+Pretty swagger doc: http://localhost:8080/swagger-ui.html
+
+Postman demo:
+curl --location --request POST 'http://localhost:8080/hateoas/donor' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "firstName": "Fred",
+    "lastName": "Cosby"
+}'
+
+curl --location --request GET 'http://localhost:8080/hateoas/donor/2'
