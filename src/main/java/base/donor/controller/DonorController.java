@@ -48,7 +48,7 @@ public class DonorController {
       content = @Content)
   })
   @GetMapping("/donor/{id}")
-  public Donor finfById(@Parameter(description = "ID of book to be searched") @PathVariable int id) {
+  public Donor findById(@Parameter(description = "ID of book to be searched") @PathVariable int id) {
     return donorRepository.findById(id).orElseThrow(() -> new DonorNotFoundException());
   }
 
