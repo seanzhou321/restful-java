@@ -10,10 +10,18 @@ import lombok.Data;
 
 @Data
 @Entity
-public class Donor {
+public class Donor implements Cloneable {
+
+  public Donor() {}
+
+  public Donor(String firstName, String lastName) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+  }
+
   @Id
   @GeneratedValue(strategy= GenerationType.IDENTITY)
-  private int id;
+  private Integer id;
 
   @NotBlank
   @Size(min=0, max=30)
@@ -22,4 +30,8 @@ public class Donor {
   @NotBlank
   @Size(min=0, max=30)
   private String lastName;
+
+  public Donor clone() throws CloneNotSupportedException {
+    return  (Donor) super.clone();
+  }
 }

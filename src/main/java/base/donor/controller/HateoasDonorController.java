@@ -13,12 +13,14 @@ import java.util.stream.Collectors;
 import javax.validation.constraints.NotNull;
 import org.springframework.hateoas.CollectionModel;
 import org.springframework.hateoas.EntityModel;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -34,6 +36,7 @@ public class HateoasDonorController {
   }
 
   @PostMapping("/hateoas/donor")
+  @ResponseStatus(HttpStatus.CREATED)
   public EntityModel<Donor> create(@NotNull @RequestBody Donor donor) {
 
     Donor donor1 = donorRepository.save(donor);
@@ -58,6 +61,7 @@ public class HateoasDonorController {
   }
 
   @PutMapping("/hateoas/donor")
+  @ResponseStatus(HttpStatus.CREATED)
   public EntityModel<Donor> update(@RequestBody Donor donor) {
 
     donorRepository.save(donor);
