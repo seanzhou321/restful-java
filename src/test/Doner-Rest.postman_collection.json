@@ -1,0 +1,162 @@
+{
+	"info": {
+		"_postman_id": "425ac320-961d-4b75-8c04-ef79bb8fa202",
+		"name": "Boot-Rest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1525064"
+	},
+	"item": [
+		{
+			"name": "Create Profile",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"name\":\"abc\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/spring-boot-rest/foos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"spring-boot-rest",
+						"foos"
+					]
+				},
+				"description": "POST foo"
+			},
+			"response": []
+		},
+		{
+			"name": "donor-get-all",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/hateoas/donor",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"hateoas",
+						"donor"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "donor-get-id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/hateoas/donor/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"hateoas",
+						"donor",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Donor-post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\": \"Sean\",\n    \"lastName\": \"Smith\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/hateoas/donor",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"hateoas",
+						"donor"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "donor-put",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": 2,\n    \"firstName\": \"John\",\n    \"lastName\": \"Smith\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/hateoas/donor",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"hateoas",
+						"donor"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "donor-delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/hateoas/donor/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"hateoas",
+						"donor",
+						"4"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
